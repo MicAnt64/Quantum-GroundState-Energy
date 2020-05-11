@@ -24,3 +24,5 @@ X = df.drop(['Eat'], axis=1)
 X_data = X.as_matrix()
 y_data = y.as_matrix()
 
+X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size = 0.38, random_state = 64)
+X_valid, X_test, y_valid, y_test = train_test_split(X_test, y_test, test_size = 0.50, random_state = 64)
